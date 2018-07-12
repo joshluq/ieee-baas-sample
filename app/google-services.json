@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "309301094327",
+    "firebase_url": "https://ieee-sample.firebaseio.com",
+    "project_id": "ieee-sample",
+    "storage_bucket": "ieee-sample.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309301094327:android:e297c9574a809a5f",
+        "android_client_info": {
+          "package_name": "com.everis.example.baasandroidsample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309301094327-9rdc94tpepc3m9r81efvf3dhpn2lha0k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnsLaJg8Uzz7-JxWR2RTfVJQ2X6eBAOOA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
