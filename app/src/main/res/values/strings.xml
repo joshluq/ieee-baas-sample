@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Firebase + Kotlin</string>
+    <string name="app_name">IEEE BaaS</string>
     <string name="register_email">Email</string>
     <string name="register_password">Password</string>
     <string name="register_login_button">Log In</string>
