@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import com.everis.example.baasandroidsample.R;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class LoginFragment extends Fragment {
 
@@ -30,6 +32,20 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_login,container,false);
+        View view = inflater.inflate(R.layout.fragment_login,container,false);
+        ButterKnife.bind(this, view);
+        return view;
     }
+
+    @OnClick(R.id.login_button)
+    void onLogin(){
+
+    }
+
+    @OnClick(R.id.register_button)
+    void onRegister(){
+
+    }
+
+
 }
