@@ -2,10 +2,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorWhite">
 
     <android.support.design.widget.TextInputEditText
-        android:id="@+id/tiet_login_email"
+        android:id="@+id/tiet_register_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -19,48 +19,41 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.design.widget.TextInputEditText
-        android:id="@+id/tiet_login_password"
+        android:id="@+id/tiet_register_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="@string/register_password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/tiet_login_email"
-        app:layout_constraintStart_toStartOf="@+id/tiet_login_email"
-        app:layout_constraintTop_toBottomOf="@+id/tiet_login_email" />
+        app:layout_constraintEnd_toEndOf="@+id/tiet_register_email"
+        app:layout_constraintStart_toStartOf="@+id/tiet_register_email"
+        app:layout_constraintTop_toBottomOf="@+id/tiet_register_email" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/tiet_register_confirm_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/register_confirm_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/tiet_register_email"
+        app:layout_constraintStart_toStartOf="@+id/tiet_register_email"
+        app:layout_constraintTop_toBottomOf="@+id/tiet_register_password" />
 
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/create_account_button"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:background="@color/colorPrimary"
-        android:text="@string/register_login_button"
+        android:text="@string/create_account_button"
         android:textColor="@color/primary_light"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tiet_login_password"
-        />
-
-    <Button
-        android:id="@+id/register_button"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:background="@color/colorAccent"
-        android:text="@string/register_button"
-        android:textColor="@color/colorWhite"
-        android:layout_marginBottom="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_button" />
+        app:layout_constraintTop_toBottomOf="@+id/tiet_register_confirm_password"/>
 
 </android.support.constraint.ConstraintLayout>

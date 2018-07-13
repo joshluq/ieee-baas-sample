@@ -2,6 +2,7 @@
     <string name="app_name">Firebase + Kotlin</string>
     <string name="register_email">Email</string>
     <string name="register_password">Password</string>
+    <string name="register_confirm_password">Confirmar password</string>
     <string name="register_login_button">Log In</string>
     <string name="sesion_persistance_message">Mantener la sesión activa</string>
     <string name="home_log_out_button">Log Out</string>
@@ -11,7 +12,7 @@
     <string name="home_open_contacrts_button">Contacts</string>
 
     <string name="register_button">Register</string>
-    <string name="create_account_button">No account yet? Create one</string>
+    <string name="create_account_button">Create account</string>
     <string name="register_repassword">Repeat password</string>
     <string name="upload_picture_button">subir foto</string>
 </resources>
