@@ -28,7 +28,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class SignUpFragment extends Fragment implements OnCompleteListener<AuthResult>, OnSuccessListener<AuthResult>, OnFailureListener {
+public class SignUpFragment extends Fragment implements OnSuccessListener<AuthResult>, OnFailureListener {
 
     @BindView(R.id.tiet_register_email)
     TextInputEditText etEmail;
@@ -79,25 +79,21 @@ public class SignUpFragment extends Fragment implements OnCompleteListener<AuthR
         if (isValidEmail() && isValidPassword()) {
             showLoading(btnCreateAccount);
             firebaseAuth.createUserWithEmailAndPassword(getEmail(), getPassword())
-                    .addOnCompleteListener(this)
                     .addOnSuccessListener(this)
                     .addOnFailureListener(this);
         }
     }
 
     @Override
-    public void onComplete(@NonNull Task<AuthResult> task) {
-        hideLoading(btnCreateAccount);
-    }
-
-    @Override
     public void onSuccess(AuthResult authResult) {
+        hideLoading(btnCreateAccount);
         Navigator.navigateToHomeActivity(activity);
         activity.finish();
     }
 
     @Override
     public void onFailure(@NonNull Exception e) {
+        hideLoading(btnCreateAccount);
         showToast("Ups! has been an error");
     }
 
@@ -105,7 +101,11 @@ public class SignUpFragment extends Fragment implements OnCompleteListener<AuthR
         if (getPassword().isEmpty() || getConfirmPassword().isEmpty()) {
             showToast("Field required");
             return false;
-        } else if (!getPassword().equals(getConfirmPassword())) {
+        }
+        else if(getPassword().length()<6) {
+            showToast("Invalid password");
+            return false;
+        }else if (!getPassword().equals(getConfirmPassword())) {
             showToast("The password should be the same");
             return false;
         }
